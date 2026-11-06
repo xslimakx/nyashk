@@ -1,0 +1,17 @@
+{
+    "name": "няшк — спільнота для няшечок, альтушечок і альтернативної молоді",
+    "short_name": "няшк",
+    "description": "Неформальна спільнота для няшечок, альтушечок і альтернативної молоді. Спілкування, творчість, стиль і пропагандування українського.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0a0908",
+    "theme_color": "#0a0908",
+    "lang": "uk",
+    "dir": "ltr",
+    "categories": ["social", "lifestyle"],
+    "icons": [
+        { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+        { "src": "/favicon.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+        { "src": "/favicon.ico", "sizes": "16x16 32x32 48x48", "type": "image/x-icon" }
+    ]
+}

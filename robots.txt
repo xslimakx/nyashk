@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /deploy.php
+
+Sitemap: https://nyashk.com/sitemap.xml

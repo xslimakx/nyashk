@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nyashk Launcher — install and update nyashk VST3 plugins</title>
+    <meta name="description" content="Nyashk Launcher: one free app for Linux, Windows and macOS that installs and updates the nyashk VST3 plugins — NyashkSynth, NyashkTune, NyashkOpto, NyashkChannel, NyashkEQ, NyashkAir, NyashkPre, NyashkMeter.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="няшк">
+    <link rel="canonical" href="https://nyashk.com/launcher/">
+    <link rel="alternate" hreflang="en" href="https://nyashk.com/launcher/">
+    <link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/launcher/">
+    <link rel="alternate" hreflang="x-default" href="https://nyashk.com/launcher/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Cormorant+SC:wght@500;700&family=PT+Mono&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css?v=1793306878">
+    <link rel="icon" href="/favicon.svg?v=1788711350" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico?v=1788711354" sizes="any">
+    <link rel="apple-touch-icon" href="/favicon.png?v=1788711354">
+    <link rel="manifest" href="/manifest.json">
+
+    <meta property="og:title" content="Nyashk Launcher — install and update nyashk VST3 plugins">
+    <meta property="og:description" content="Nyashk Launcher: one free app for Linux, Windows and macOS that installs and updates the nyashk VST3 plugins — NyashkSynth, NyashkTune, NyashkOpto, NyashkChannel, NyashkEQ, NyashkAir, NyashkPre, NyashkMeter.">
+    <meta property="og:image" content="https://nyashk.com/og-image.png?v=1790866324">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:alt" content="Nyashk Launcher — install and update nyashk VST3 plugins">
+    <meta property="og:url" content="https://nyashk.com/launcher/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="няшк">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="uk_UA">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nyashk Launcher — install and update nyashk VST3 plugins">
+    <meta name="twitter:description" content="Nyashk Launcher: one free app for Linux, Windows and macOS that installs and updates the nyashk VST3 plugins — NyashkSynth, NyashkTune, NyashkOpto, NyashkChannel, NyashkEQ, NyashkAir, NyashkPre, NyashkMeter.">
+    <meta name="twitter:image" content="https://nyashk.com/og-image.png?v=1790866324">
+
+    <meta name="theme-color" content="#0a0a0a">
+</head>
+<body class="page-launcher">
+
+<!-- Спрайт прикрас та іконок. Не display:none — інакше ламаються градієнти. -->
+<svg class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+        <linearGradient id="g-chrome" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffffff"/><stop offset=".25" stop-color="#c4c4c4"/>
+            <stop offset=".5" stop-color="#5c5c5c"/><stop offset=".7" stop-color="#ececec"/>
+            <stop offset="1" stop-color="#858585"/>
+        </linearGradient>
+    </defs>
+    <symbol id="i-cross" viewBox="0 0 60 90">
+        <path d="M25 3 L30 0 L35 3 V22 H56 L60 27 L56 32 H35 V86 L30 90 L25 86 V32 H4 L0 27 L4 22 H25 Z" fill="url(#g-chrome)" stroke="#2a2a2a" stroke-width=".8"/>
+        <path d="M30 4 V84 M5 27 H55" stroke="rgba(255,255,255,.55)" stroke-width="1"/>
+    </symbol>
+    <symbol id="i-sparkle" viewBox="-10 -10 20 20">
+        <path d="M0 -10 C1 -2 2 -1 10 0 C2 1 1 2 0 10 C-1 2 -2 1 -10 0 C-2 -1 -1 -2 0 -10 Z" fill="#fff"/>
+    </symbol>
+    <symbol id="i-flourish" viewBox="0 0 300 40">
+        <g fill="none" stroke="#bdbdbd" stroke-width="1.2" stroke-linecap="round">
+            <path id="fl-half" d="M162 20 C188 20 198 6 218 10 C234 13 232 30 218 28 C208 26 212 16 220 18 M204 22 C234 26 262 22 296 20"/>
+            <use href="#fl-half" transform="translate(300 0) scale(-1 1)"/>
+        </g>
+        <path d="M147 4 H153 V14 H162 V20 H153 V36 H147 V20 H138 V14 H147 Z" fill="url(#g-chrome)"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 12"><path d="M0 6 H21 M16 1 L22 6 L16 11" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="i-discord" viewBox="0 0 24 24"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></symbol>
+    <symbol id="i-telegram" viewBox="0 0 24 24"><path fill="currentColor" d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></symbol>
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3 V15 M6 10 L12 16 L18 10 M4 20 H20" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+</svg>
+
+<div class="atmo" aria-hidden="true">
+    <div class="haze h1"></div>
+    <div class="haze h2"></div>
+    <div class="haze h3"></div>
+    <div class="haze h4"></div>
+    <div class="vignette"></div>
+    <div class="grain"></div>
+</div>
+<canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<nav class="nav" id="top">
+    <a class="nav-brand" href="/" aria-label="няшк">няшк</a>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="/">Home</a></li>
+        <li><a href="/community/">Community</a></li>
+        <li><a href="/launcher/" aria-current="page">Launcher</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+    </ul>
+    <div class="lang" role="group" aria-label="Мова / Language">
+        <a href="/launcher/" hreflang="en" lang="en" class="on" aria-current="true">EN</a>
+        <a href="/uk/launcher/" hreflang="uk" lang="uk">UA</a>
+    </div>
+    <button class="nav-burger" id="navBurger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+</nav>
+
+<header class="page-hero">
+    <img class="launcher-icon" src="/photos/launcher/icon.png?v=1793958509" alt="" width="80" height="80" data-reveal>
+    <p class="page-kicker" data-reveal>№ 01 · Linux · Windows · macOS</p>
+    <h1 class="page-title" data-reveal>Nyashk Launcher</h1>
+    <p class="page-sub" data-reveal>One app to install and update all our VST3 plugins. Pick a version, read what’s new, update everything in one click.</p>
+
+    <div class="launcher-get" data-reveal>
+        <a href="https://github.com/xslimakx/NyashkLauncher/releases/latest/download/NyashkLauncher-Windows.zip" class="btn btn-solid" data-os="windows"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Windows</a>
+        <a href="https://github.com/xslimakx/NyashkLauncher/releases/latest/download/NyashkLauncher-macOS.zip" class="btn btn-solid" data-os="mac"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>macOS</a>
+        <a href="https://github.com/xslimakx/NyashkLauncher/releases/latest/download/NyashkLauncher-Linux.zip" class="btn btn-solid" data-os="linux"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg>Linux</a>
+    </div>
+    <p class="launcher-meta" data-reveal>Free · open source · unzip and run · <a href="https://github.com/xslimakx/NyashkLauncher" target="_blank" rel="noopener">GitHub</a></p>
+</header>
+
+<main class="shell">
+    <section class="block block-tight">
+        <button class="launcher-main frame shot-zoom" data-src="/photos/launcher/launcher.webp?v=1793306472" data-cap="Nyashk Launcher" aria-label="Enlarge screenshot: Nyashk Launcher" data-reveal>
+            <img src="/photos/launcher/launcher.webp?v=1793306472" alt="Nyashk Launcher: the plugin library" width="1120" height="1090">
+        </button>
+
+        <div class="launcher-feats">
+            <div class="pillar" data-reveal style="--delay:0s">
+                <span class="pillar-num">I</span>
+                <h3>Everything in one place</h3>
+                <p>Every plugin by category, with the installed and the latest version side by side.</p>
+            </div>
+            <div class="pillar" data-reveal style="--delay:0.1s">
+                <span class="pillar-num">II</span>
+                <h3>One-click updates</h3>
+                <p>Update one plugin, the ticked ones or all at once. Downloads are checked with SHA-256.</p>
+            </div>
+            <div class="pillar" data-reveal style="--delay:0.2s">
+                <span class="pillar-num">III</span>
+                <h3>Any version</h3>
+                <p>Pick any release from the dropdown to install or roll back, with release notes since your version.</p>
+            </div>
+            <div class="pillar" data-reveal style="--delay:0.3s">
+                <span class="pillar-num">IV</span>
+                <h3>Stays fresh</h3>
+                <p>Checks in the background, sends a desktop notification and updates itself.</p>
+            </div>
+        </div>
+
+        <div class="launcher-shots">
+            <button class="launcher-shot frame shot-zoom" data-src="/photos/launcher/launcher-plugin.webp?v=1793306472" data-cap="Plugin page" aria-label="Enlarge screenshot: Plugin page" data-reveal>
+                <img src="/photos/launcher/launcher-plugin.webp?v=1793306472" alt="Plugin page" loading="lazy">
+                <span>Plugin page</span>
+            </button>
+            <button class="launcher-shot frame shot-zoom" data-src="/photos/launcher/launcher-settings.webp?v=1793306472" data-cap="Settings" aria-label="Enlarge screenshot: Settings" data-reveal>
+                <img src="/photos/launcher/launcher-settings.webp?v=1793306472" alt="Settings" loading="lazy">
+                <span>Settings</span>
+            </button>
+        </div>
+    </section>
+
+    <svg class="divider" aria-hidden="true"><use href="#i-flourish"/></svg>
+
+    <section class="block" id="plugins">
+        <h2 class="title" data-reveal><span class="num">VST3</span>Plugins inside</h2>
+        <p class="hint" data-reveal>The launcher installs these. Free and open source, written in Rust.</p>
+        <div class="plugins plugins-mini">
+            <article class="plugin frame" data-reveal style="--delay:0.0s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashksynth.png?v=1793958509" data-cap="NyashkSynth" aria-label="Enlarge screenshot: NyashkSynth">
+                    <img src="/photos/vst/nyashksynth.png?v=1793958509" alt="NyashkSynth" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Synth</p>
+                    <h3 class="plugin-name">NyashkSynth</h3>
+                    <p class="plugin-about">Serum-style wavetable synth: 3 oscillators, a wavetable editor, two filters, 8 LFOs, a mod matrix, an effect rack and 146 presets.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkSynth/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkSynth" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.1s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashktune.png?v=1793958509" data-cap="NyashkTune" aria-label="Enlarge screenshot: NyashkTune">
+                    <img src="/photos/vst/nyashktune.png?v=1793958509" alt="NyashkTune" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Autotune</p>
+                    <h3 class="plugin-name">NyashkTune</h3>
+                    <p class="plugin-about">Realtime vocal pitch correction — from natural tuning to hard T-Pain. Formant shift, harmony voices, follows MIDI.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkTune/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkTune" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.2s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashkopto.png?v=1793958509" data-cap="NyashkOpto" aria-label="Enlarge screenshot: NyashkOpto">
+                    <img src="/photos/vst/nyashkopto.png?v=1793958509" alt="NyashkOpto" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Compressor</p>
+                    <h3 class="plugin-name">NyashkOpto</h3>
+                    <p class="plugin-about">LA-2A style optical compressor with program-dependent attack, a limit mode and analog character.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkOpto/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkOpto" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.0s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashkchannel.webp?v=1793958509" data-cap="NyashkChannel" aria-label="Enlarge screenshot: NyashkChannel">
+                    <img src="/photos/vst/nyashkchannel.webp?v=1793958509" alt="NyashkChannel" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Channel strip</p>
+                    <h3 class="plugin-name">NyashkChannel</h3>
+                    <p class="plugin-about">SSL-style channel strip: input stage, filters, expander / gate, compressor and a 4-band EQ in one plugin.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkChannel/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkChannel" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.1s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashkeq.webp?v=1793958509" data-cap="NyashkEQ" aria-label="Enlarge screenshot: NyashkEQ">
+                    <img src="/photos/vst/nyashkeq.webp?v=1793958509" alt="NyashkEQ" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Equalizer</p>
+                    <h3 class="plugin-name">NyashkEQ</h3>
+                    <p class="plugin-about">4-band parametric EQ with HP / LP, draggable nodes over a live spectrum and mid / side mode.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkEQ/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkEQ" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.2s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashkair.webp?v=1793958509" data-cap="NyashkAir" aria-label="Enlarge screenshot: NyashkAir">
+                    <img src="/photos/vst/nyashkair.webp?v=1793958509" alt="NyashkAir" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Exciter</p>
+                    <h3 class="plugin-name">NyashkAir</h3>
+                    <p class="plugin-about">Air and presence for vocals and mixes: MID AIR and HIGH AIR with dynamic reduction, so the top stays smooth.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkAir/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkAir" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.0s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashkpre.webp?v=1793958509" data-cap="NyashkPre" aria-label="Enlarge screenshot: NyashkPre">
+                    <img src="/photos/vst/nyashkpre.webp?v=1793958509" alt="NyashkPre" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Preamp</p>
+                    <h3 class="plugin-name">NyashkPre</h3>
+                    <p class="plugin-about">Light vocal preamp and saturator with tube, iron and clean character plus a simple tone section.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkPre/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkPre" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+            <article class="plugin frame" data-reveal style="--delay:0.1s">
+                <button class="plugin-shot shot-zoom" data-src="/photos/vst/nyashkmeter.webp?v=1793958509" data-cap="NyashkMeter" aria-label="Enlarge screenshot: NyashkMeter">
+                    <img src="/photos/vst/nyashkmeter.webp?v=1793958509" alt="NyashkMeter" loading="lazy">
+                </button>
+                <div class="plugin-body">
+                    <p class="plugin-tag">Meter</p>
+                    <h3 class="plugin-name">NyashkMeter</h3>
+                    <p class="plugin-about">Master-bus analyser: LUFS, LRA, true peak, spectrum, stereo and tonal balance. Audio passes untouched.</p>
+                    <p class="plugin-links">
+                        <a href="https://github.com/xslimakx/NyashkMeter/releases/latest" target="_blank" rel="noopener">Manual download</a>
+                        <a href="https://github.com/xslimakx/NyashkMeter" target="_blank" rel="noopener">GitHub</a>
+                    </p>
+                </div>
+            </article>
+        </div>
+
+        <div class="vst-foot" data-reveal>
+            <p class="hint">Unzip the release and drop the <code>.vst3</code> into your VST3 folder — or let the launcher do it.</p>
+            <a href="https://github.com/xslimakx?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost btn-sm"><svg class="ico" aria-hidden="true"><use href="#i-github"/></svg>All repositories on GitHub <svg class="arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        </div>
+    </section>
+</main>
+
+<footer class="foot">
+    <svg class="divider" aria-hidden="true"><use href="#i-flourish"/></svg>
+    <div class="foot-word" aria-hidden="true">няшк</div>
+    <p class="motto" aria-hidden="true">MMXXI · honour · creativity · Ukrainian</p>
+    <p>nyashk — a community for talk and creativity.</p>
+    <div class="foot-links">
+        <a href="/community/">Community</a>
+        <a href="/launcher/">Launcher</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="https://discord.gg/eWWAxBCCGa" target="_blank" rel="noopener">Discord</a>
+        <a href="https://t.me/nyashkdating_bot" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://github.com/xslimakx" target="_blank" rel="noopener">GitHub</a>
+        <a href="#top">Back to top</a>
+    </div>
+    <p class="stamp">© 2026 nyashk.com</p>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close"><svg viewBox="0 0 20 20"><path d="M3 3 L17 17 M17 3 L3 17" stroke="currentColor" stroke-width="1.6"/></svg></button>
+    <figure>
+        <img id="lightboxImg" src="" alt="">
+        <figcaption id="lightboxCap"></figcaption>
+    </figure>
+</div>
+
+<script src="/script.js?v=1793306568" defer></script>
+</body>
+</html>

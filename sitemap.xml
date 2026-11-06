@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://nyashk.com/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/community/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/community/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/community/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/community/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/uk/community/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/community/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/community/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/community/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/gallery/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/uk/gallery/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/gallery/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/gallery/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/launcher/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/launcher/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/launcher/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/launcher/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://nyashk.com/uk/launcher/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://nyashk.com/launcher/"/>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://nyashk.com/uk/launcher/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://nyashk.com/launcher/"/>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
